@@ -26,9 +26,9 @@
         <activity android:name=".Signup" />
         <activity
             android:name=".MainActivity"
-            android:label="Main Activity"
+            android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".InputMedicine" />
+        <activity android:name=".Medinfo"></activity>
     </application>
 
 </manifest>
