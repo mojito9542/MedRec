@@ -31,10 +31,10 @@
         android:hint="Re-Enter Password*"
         android:textSize="20dp"/>
     <Button
-        android:id="@+id/login"
+        android:id="@+id/signup"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:text="Login"/>
+        android:text="Sign up"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -42,8 +42,8 @@
         android:text="OR"
         android:textAlignment="center"/>
     <Button
-        android:id="@+id/signup"
+        android:id="@+id/login"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:text="Sign Up"/>
+        android:text="Log in"/>
 </LinearLayout>
