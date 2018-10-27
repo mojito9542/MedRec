@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -30,6 +31,7 @@ public class Medinfo extends AppCompatActivity implements View.OnClickListener {
     FirebaseAuth auth;
     private String TAG;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +39,8 @@ public class Medinfo extends AppCompatActivity implements View.OnClickListener {
         dd=findViewById(R.id.dd);
         mm=findViewById(R.id.mm);
         yy=findViewById(R.id.yy);
+        LinearLayout ll=findViewById(R.id.ll);
+        ll.getBackground().setAlpha(100);
         auth=FirebaseAuth.getInstance();
         days=findViewById(R.id.days);
         dose=findViewById(R.id.dose);
