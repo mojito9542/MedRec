@@ -106,7 +106,12 @@ public class LoginActivity extends AppCompatActivity {
         if (TextUtils.isEmpty(password)) {
             mpassword.setError("Required.");
             valid = false;
-        } else {
+        }
+        else if(password.length()<6){
+            mpassword.setError("atleast 6 character");
+            valid= false;
+        }
+                else {
             mpassword.setError(null);
         }
 
