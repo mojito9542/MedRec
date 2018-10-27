@@ -24,7 +24,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class Signup extends AppCompatActivity {
 
     FirebaseAuth mAuth;
-    EditText memail, mpassword;
+    EditText memail, mpassword,cnfPass;
     Button signup;
     TextView login;
     private String TAG;
@@ -38,7 +38,7 @@ public class Signup extends AppCompatActivity {
         mpassword = findViewById(R.id.password);
         signup = findViewById(R.id.signup);
         login = findViewById(R.id.login);
-
+        cnfPass= findViewById(R.id.cnfpassword);
         mAuth.signOut();
         login.setOnClickListener(new OnClickListener() {
             @Override
@@ -105,10 +105,25 @@ public class Signup extends AppCompatActivity {
         if (TextUtils.isEmpty(password)) {
             mpassword.setError("Required.");
             valid = false;
-        } else {
+        }
+        else if(password.length()<6){
+            mpassword.setError("atleast 6 character");
+            valid= false;
+        }else {
             mpassword.setError(null);
         }
-
+        String repass = cnfPass.getText().toString().trim();
+        if(TextUtils.isEmpty(repass)){
+            cnfPass.setError("Required.");
+            valid=false;
+        }
+        else if(!repass.equals(password)){
+            cnfPass.setError("Passwords dont match.");
+            valid =false;
+        }
+        else{
+            cnfPass.setError(null);
+        }
         return valid;
     }
 

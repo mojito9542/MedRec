@@ -72,9 +72,74 @@
         android:layout_height="wrap_content"
         android:hint="no of doage per day"
         />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:gravity="center">
+        <Button
+            android:id="@+id/dos1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            android:text="dose 1"/>
+        <Button
+            android:id="@+id/dos2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            android:text="dose 2"/>
+        <Button
+            android:id="@+id/dos3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:text="dose 3"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:gravity="center"
+        >
+        <Button
+            android:id="@+id/dos4"
+            android:layout_marginRight="10dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:text="dose 4"/>
+        <Button
+            android:id="@+id/dos5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            android:text="dose 5"/>
+        <Button
+            android:id="@+id/dos6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:text="dose 6"/>
+
+    </LinearLayout>
     <Button
         android:id="@+id/sbmt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
         android:text="submit"/>
+
 </LinearLayout>

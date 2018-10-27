@@ -123,9 +123,9 @@
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:id="@+id/detailsEditButton"
+            android:id="@+id/detailsBackButton"
             android:layout_weight="1.3"
-            android:text="Edit"
+            android:text="Cancel"
             android:textSize="20sp"
             android:textColor="#ffffff"
             android:background="@drawable/login_background"/>
