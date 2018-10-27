@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "762563035352",
+    "firebase_url": "https://medrec-b6494.firebaseio.com",
+    "project_id": "medrec-b6494",
+    "storage_bucket": "medrec-b6494.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:762563035352:android:1689894577125689",
+        "android_client_info": {
+          "package_name": "com.illuminati.www.medrec"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "762563035352-6h6l73j8l6hg1gv1c09dco6q8n0l1ijs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.illuminati.www.medrec",
+            "certificate_hash": "869c58295fadc3372ea0e45031467a449b411d9a"
+          }
+        },
+        {
+          "client_id": "762563035352-si214efi8ssupfv5fv4vqfhecn1cs48v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwnhiUlWy9dOIgYt3UpqrzgCeZxTcAoqs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "762563035352-si214efi8ssupfv5fv4vqfhecn1cs48v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
