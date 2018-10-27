@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -24,7 +25,8 @@ public class LoginActivity extends AppCompatActivity {
 
     FirebaseAuth mAuth;
     EditText memail, mpassword;
-    Button signup, login;
+    Button  login;
+    TextView register;
     private String TAG;
 
     @Override
@@ -34,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         memail = findViewById(R.id.email);
         mpassword = findViewById(R.id.password);
-        signup = findViewById(R.id.signup);
+        register = findViewById(R.id.register);
         login = findViewById(R.id.login);
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if (currentUser != null)
@@ -46,7 +48,7 @@ public class LoginActivity extends AppCompatActivity {
                 signIn(memail.getText().toString(), mpassword.getText().toString());
             }
         });
-        signup.setOnClickListener(new OnClickListener() {
+        register.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(LoginActivity.this, Signup.class));

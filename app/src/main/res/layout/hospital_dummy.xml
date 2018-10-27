@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical">
 
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/hospitalCard"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_margin="50dp"
+        card_view:cardCornerRadius="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="5dp">
+
+            <TextView
+                android:id="@+id/hospitalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Dummy Hospital"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/hospitalAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hospitalText"
+                android:maxLines="1"
+                android:text="Jagamara road,Bhubaneshwar"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
 </LinearLayout>

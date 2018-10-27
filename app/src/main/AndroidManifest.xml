@@ -23,7 +23,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Signup"></activity>
+        <activity android:name=".Signup" />
+        <activity
+            android:name=".MainActivity"
+            android:label="Main Activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".InputMedicine" />
     </application>
 
 </manifest>
