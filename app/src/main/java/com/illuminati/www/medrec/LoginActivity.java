@@ -40,7 +40,7 @@ public class LoginActivity extends AppCompatActivity {
         if (currentUser != null)
             startActivity(new Intent(LoginActivity.this, MainActivity.class));
 
-        login.setOnClickListener(new OnClickListener() {
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 signIn(memail.getText().toString(), mpassword.getText().toString());
@@ -72,7 +72,9 @@ public class LoginActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             Toast.makeText(LoginActivity.this, "Login Successful",
                                     Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(LoginActivity.this, MainActivity.class));
                             Log.d(TAG, "signInWithEmail:success");
+
                         } else {
 
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
