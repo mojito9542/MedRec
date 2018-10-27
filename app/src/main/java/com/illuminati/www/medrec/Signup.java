@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -24,7 +25,8 @@ public class Signup extends AppCompatActivity {
 
     FirebaseAuth mAuth;
     EditText memail, mpassword;
-    Button signup, login;
+    Button signup;
+    TextView login;
     private String TAG;
 
     @Override
