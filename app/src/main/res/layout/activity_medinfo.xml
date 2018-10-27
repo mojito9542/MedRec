@@ -5,45 +5,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:id="@+id/ll"
     android:gravity="center_horizontal"
-    tools:context=".Medinfo">
+    tools:context=".Medinfo"
+    android:layout_marginTop="50dp"
+    android:background="@drawable/pill">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center_horizontal"
         android:weightSum="4">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Expiry date:-"
+            android:textSize="20dp"
+            android:textColor="#000000"
+           android:gravity="center"
+            android:layout_weight="1"/>
         <EditText
             android:id="@+id/dd"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="0.6"
-            android:text="12"
-            />
+            android:layout_weight="0.5"
+            android:text="12" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="/"
+            android:textSize="16sp"
+            android:layout_marginTop="12sp"
             android:textAlignment="center"/>
         <EditText
             android:id="@+id/mm"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="0.6"
-            android:text="12"
-            />
+            android:layout_weight="0.5"
+            android:text="12" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="/"
+            android:textSize="16sp"
+            android:layout_marginTop="12sp"
             android:textAlignment="center"/>
         <EditText
             android:id="@+id/yy"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="0.6"
-            android:text="12"
-            />
+            android:layout_weight="0.5"
+            android:text="12" />
 
     </LinearLayout>
 
@@ -52,25 +63,29 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="name of medicine"
-        />
+          android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="5dp"/>
 
     <EditText
         android:id="@+id/inv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Invoice no"
+        android:layout_marginHorizontal="20dp"
         />
     <EditText
         android:id="@+id/days"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="no of days"
+        android:layout_marginHorizontal="20dp"
         />
     <EditText
         android:id="@+id/dose"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="no of doage per day"
+        android:hint="no of dosage per day"
+        android:layout_marginHorizontal="20dp"
         />
     <LinearLayout
         android:layout_width="match_parent"
@@ -139,7 +154,9 @@
         android:id="@+id/sbmt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="submit"/>
+        android:layout_marginTop="30dp"
+        android:background="@drawable/login_background"
+        android:text="submit"
+        android:textColor="#ffffff"/>
 
 </LinearLayout>
