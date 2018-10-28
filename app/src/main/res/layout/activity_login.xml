@@ -24,6 +24,8 @@
       android:layout_height="50dp"
       android:hint="Email Address"
       android:textSize="20dp"
+      android:maxLines="1"
+      android:inputType="textEmailAddress"
       android:background="@drawable/rectangle_shape"
       android:layout_marginBottom="19dp"
       android:paddingStart="15dp"/>
@@ -33,6 +35,8 @@
         android:layout_height="50dp"
         android:hint="Password"
         android:textSize="20dp"
+        android:maxLines="1"
+        android:inputType="textPassword"
         android:background="@drawable/rectangle_shape"
         android:layout_marginBottom="19dp"
         android:paddingStart="15dp"/>

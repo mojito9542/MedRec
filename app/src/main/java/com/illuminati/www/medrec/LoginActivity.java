@@ -46,6 +46,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 signIn(memail.getText().toString(), mpassword.getText().toString());
+
             }
         });
         register.setOnClickListener(new OnClickListener() {
@@ -75,6 +76,8 @@ public class LoginActivity extends AppCompatActivity {
                             Toast.makeText(LoginActivity.this, "Login Successful",
                                     Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                            memail.setText("");
+                            mpassword.setText("");
                             Log.d(TAG, "signInWithEmail:success");
 
                         } else {

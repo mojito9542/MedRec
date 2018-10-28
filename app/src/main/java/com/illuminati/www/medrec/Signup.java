@@ -51,6 +51,7 @@ public class Signup extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 createAccount(memail.getText().toString(), mpassword.getText().toString());
+
             }
         });
 
@@ -75,6 +76,10 @@ public class Signup extends AppCompatActivity {
                             Toast.makeText(Signup.this, "Registration Successful",
                                     Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(Signup.this, LoginActivity.class));
+                            memail.setText("");
+                            mpassword.setText("");
+                            cnfPass.setText("");
+                            finish();
                             Log.d(TAG, "signInWithEmail:success");
                         } else {
 

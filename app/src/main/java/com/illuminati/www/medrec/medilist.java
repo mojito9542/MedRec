@@ -8,6 +8,16 @@ import java.util.Date;
  */
 public class medilist {
 Date exp;
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    Date date;
 String name,dose,days,inv;
 
 

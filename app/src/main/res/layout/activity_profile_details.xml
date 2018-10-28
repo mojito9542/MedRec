@@ -55,6 +55,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1.5"
             android:id="@+id/address1"
+            android:maxLines="1"
             android:hint="Apartment name,Street"/>
     </LinearLayout>
     <LinearLayout
@@ -75,6 +76,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1.5"
+            android:maxLines="1"
             android:id="@+id/address2"/>
     </LinearLayout>
     <LinearLayout
@@ -95,6 +97,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1.5"
+            android:maxLines="1"
+            android:inputType="phone"
             android:id="@+id/contact" />
     </LinearLayout>
 <LinearLayout

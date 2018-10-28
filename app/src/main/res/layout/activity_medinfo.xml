@@ -27,6 +27,8 @@
             android:id="@+id/dd"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:maxLines="1"
+            android:inputType="number"
             android:layout_weight="0.5"
             android:text="12" />
         <TextView
@@ -41,6 +43,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
+            android:maxLines="1"
+            android:inputType="number"
             android:text="12" />
         <TextView
             android:layout_width="wrap_content"
@@ -54,6 +58,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
+            android:maxLines="1"
+            android:inputType="number"
             android:text="12" />
 
     </LinearLayout>
@@ -71,6 +77,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Invoice no"
+        android:maxLines="1"
+        android:inputType="number"
         android:layout_marginHorizontal="20dp"
         />
     <EditText
@@ -78,6 +86,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="no of days"
+        android:maxLines="1"
+        android:inputType="number"
         android:layout_marginHorizontal="20dp"
         />
     <EditText
@@ -85,6 +95,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="no of dosage per day"
+        android:maxLines="1"
+        android:inputType="number"
         android:layout_marginHorizontal="20dp"
         />
     <LinearLayout

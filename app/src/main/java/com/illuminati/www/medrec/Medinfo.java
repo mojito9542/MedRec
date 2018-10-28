@@ -64,6 +64,7 @@ public class Medinfo extends AppCompatActivity implements View.OnClickListener {
                     med.put("name", name.getText().toString().trim());
                     med.put("days", days.getText().toString().trim());
                     med.put("dose", dose.getText().toString().trim());
+                    med.put("date",new Date());
                     med.put("expiry",date);
                     med.put("inv",inv.getText().toString().trim());
                     db.collection("meds"+auth.getCurrentUser().getUid())
@@ -115,6 +116,7 @@ public class Medinfo extends AppCompatActivity implements View.OnClickListener {
     @Override
     public void onBackPressed() {
         startActivity(new Intent(Medinfo.this,MainActivity.class));
+        finish();
     }
 
     @Override

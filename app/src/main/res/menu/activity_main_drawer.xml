@@ -15,6 +15,13 @@
             android:icon="@drawable/ic_portrait_black_24dp"
             android:title="Profile Details" />
     </group>
-
+    <item
+        android:id="@+id/signout"
+        android:icon="@drawable/ic_portrait_black_24dp"
+        android:title="Sign Out" />
+    <item
+        android:id="@+id/hospital"
+        android:icon="@drawable/ic_portrait_black_24dp"
+        android:title="Participating Hospitals" />
 
 </menu>

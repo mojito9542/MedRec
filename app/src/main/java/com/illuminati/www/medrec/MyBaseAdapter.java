@@ -1,6 +1,7 @@
 package com.illuminati.www.medrec;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,16 +12,18 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.firestore.FirebaseFirestore;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Scanner;
 
 public class MyBaseAdapter extends ArrayAdapter<medilist> {
     private ArrayList<medilist> myList;
     LayoutInflater inflater;
     Context context;
-
 
 
     public MyBaseAdapter(Context context, ArrayList<medilist> myList) {
@@ -33,7 +36,8 @@ public class MyBaseAdapter extends ArrayAdapter<medilist> {
 
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
-        MyViewHolder mViewHolder;
+        final MyViewHolder mViewHolder;
+
         if (convertView == null) {
             convertView = inflater.inflate(R.layout.dummy, parent, false);
             mViewHolder = new MyViewHolder(convertView);
@@ -52,6 +56,33 @@ public class MyBaseAdapter extends ArrayAdapter<medilist> {
          mViewHolder.name.setText(myList.get(position).getName());
         mViewHolder.dose.setText(myList.get(position).getDose());
         mViewHolder.days.setText(myList.get(position).getDays());
+        Date curr=new Date();
+        Date init=myList.get(position).getDate();
+        int diffInDays = (int) ((curr.getTime() - init.getTime()) / (1000 * 60 * 60 * 24));
+        int dosday= Integer.valueOf(myList.get(position).getDays());
+        if(diffInDays>=dosday)
+        {
+            mViewHolder.inc.setVisibility(View.VISIBLE);
+            mViewHolder.rec.setVisibility(View.VISIBLE);
+            mViewHolder.inc.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    context.startActivity(new Intent(context,Medinfo.class));
+                }
+            });
+            mViewHolder.rec.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    context.startActivity(new Intent(context,Main2Activity.class));
+                }
+            });
+
+        }
+
+        else
+        {
+            mViewHolder.days.setText(String.valueOf(dosday-diffInDays));
+        }
         return convertView;
     }
 
@@ -59,15 +90,14 @@ public class MyBaseAdapter extends ArrayAdapter<medilist> {
     private class MyViewHolder {
 
         TextView exp,name,dose,days;
-        Button invs,cancel;
+        Button inc,rec;
         private MyViewHolder(View view) {
             exp= view.findViewById(R.id.exp);
             name=view.findViewById(R.id.name);
             dose=view.findViewById(R.id.dose);
             days=view.findViewById(R.id.days);
-            invs=view.findViewById(R.id.invs);
-            cancel=view.findViewById(R.id.cancel);
-
+            inc=view.findViewById(R.id.increase);
+            rec=view.findViewById(R.id.recycle);
 
         }
     }

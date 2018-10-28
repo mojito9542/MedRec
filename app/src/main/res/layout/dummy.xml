@@ -13,7 +13,7 @@
          android:layout_width="match_parent"
          android:layout_height="200dp"
          android:orientation="vertical"
-         android:weightSum="7"
+         android:weightSum="6"
          android:paddingVertical="5dp">
 
          <TextView
@@ -39,7 +39,7 @@
          android:layout_width="0dp"
          android:layout_height="match_parent"
          android:text="Number of Days"
-         android:textSize="15sp"
+         android:textSize="16sp"
          android:textColor="#000000"
          android:paddingLeft="10dp"
          android:layout_weight="1"
@@ -48,6 +48,7 @@
                android:layout_width="0dp"
                android:layout_height="match_parent"
                android:text="9"
+               android:textSize="15dp"
                android:layout_weight="1"
                android:id="@+id/days" />
          </LinearLayout>
@@ -70,6 +71,7 @@
                  android:layout_width="0dp"
                  android:layout_height="match_parent"
                  android:text="9"
+                 android:textSize="15dp"
                  android:layout_weight="1.5"
                  android:id="@+id/dose" />
          </LinearLayout>
@@ -93,6 +95,7 @@
          android:layout_width="0dp"
          android:layout_height="match_parent"
          android:text="9"
+         android:textSize="15dp"
          android:layout_weight="1.5"
          android:id="@+id/exp"
          />
@@ -103,30 +106,33 @@
          android:weightSum="2"
          android:layout_weight="2"
          android:padding="0dp"
+         android:gravity="center"
          android:orientation="horizontal">
          <Button
-             android:id="@+id/invs"
+             android:id="@+id/recycle"
              android:layout_width="0dp"
              android:layout_height="match_parent"
              android:layout_weight="1"
-             android:text="Invoice"
-             android:textColor="#ffffff"
-             android:paddingHorizontal="20dp"
-             android:layout_marginLeft="20dp"
-             android:layout_marginTop="5dp"
-             android:background="@drawable/login_background"
-             />
-         <Button
-             android:id="@+id/cancel"
-             android:layout_width="0dp"
-             android:layout_height="match_parent"
-             android:layout_weight="1"
-             android:text="cancel dose"
+             android:text="recycle"
              android:textColor="#ffffff"
              android:paddingHorizontal="20dp"
              android:layout_marginLeft="8dp"
              android:layout_marginRight="20dp"
              android:layout_marginTop="5dp"
+             android:visibility="gone"
+             android:background="@drawable/login_background"/>
+         <Button
+             android:id="@+id/increase"
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_weight="1"
+             android:text="increase"
+             android:textColor="#ffffff"
+             android:paddingHorizontal="20dp"
+             android:layout_marginLeft="8dp"
+             android:layout_marginRight="20dp"
+             android:layout_marginTop="5dp"
+             android:visibility="gone"
              android:background="@drawable/login_background"/>
      </LinearLayout>
      </LinearLayout>
